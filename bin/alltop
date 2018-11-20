@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-require '../lib/alltop'
-# require "bundler/setup"
-# require "alltop"
+require_relative '../lib/alltop'
+
 
 CLI.new.call
