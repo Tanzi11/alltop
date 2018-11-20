@@ -3,4 +3,4 @@ require '../lib/alltop'
 # require "bundler/setup"
 # require "alltop"
 
-Alltop::CLI.new.call
+CLI.new.call
