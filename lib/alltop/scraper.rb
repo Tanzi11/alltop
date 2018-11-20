@@ -1,4 +1,4 @@
-class Alltop::Scraper
+class Scraper
 attr_accessor :name, :article
 
 @@all = []

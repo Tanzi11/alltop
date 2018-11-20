@@ -1,4 +1,4 @@
-class Alltop::CLI
+class CLI
 
 def call
   welcome
@@ -9,9 +9,7 @@ end
 
 def welcome
   puts "Welcome informed citizen! Where do you want today's news from?"
-  Alltop::Scraper.scrape
-  Alltop::Scraper.scrape_block
-  Alltop::Scraper.show_publication
+
 end
 
 
