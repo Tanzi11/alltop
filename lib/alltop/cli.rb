@@ -9,7 +9,6 @@ end
 
 def welcome
   puts "Welcome informed citizen! Where do you want today's news from?"
-
 end
 
 

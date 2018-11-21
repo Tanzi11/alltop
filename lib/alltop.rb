@@ -3,9 +3,9 @@ require 'open-uri'
 require 'pry'
 require 'nokogiri'
 
-require_relative "./alltop/version"
-require_relative "./alltop/scraper"
-require_relative "./alltop/cli"
+require_relative "./alltop/version.rb"
+require_relative "./alltop/scraper.rb"
+require_relative "./alltop/cli.rb"
 
 
 # module Alltop
