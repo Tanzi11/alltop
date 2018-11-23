@@ -11,5 +11,9 @@ def welcome
   puts "Welcome informed citizen! Where do you want today's news from?"
 end
 
+# def title_list
+#   puts Scraper.scrape
+# end
+
 
 end

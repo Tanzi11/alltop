@@ -1,23 +1,31 @@
 class Scraper
-attr_accessor :name, :article
+  # attr_accessor :title
+  #
+  # @@all = []
+  #
+  # def initialize(title=nil)
+  #   @title = title
+  #   @@all << self
+  # end
+  #
+  # def self.all
+  #   @@all
+  # end
 
-# @@all = []
-#
-# def initialize(name, article)
-#   @name = name
-#   @article = article
-# end
-#
-# def self.all
-#   @@all
-# end
 
 def self.scrape
   doc = Nokogiri::HTML(open("https://alltop.com/"))
   publication_names = doc.css("div.container p")
-  name = publication_names.css("a").children[0..27].text
+   publication_names.css("a").collect do |name|
+   title = name.children.text
+end
 end
 
+# each do |name|
+# title = name.children.text
+
+# publication_names = doc.css("div.container p")
+# name = publication_names.css("a").children.text
 
 # def self.scrape_block
 #   @scraping_block.each do |ele|
