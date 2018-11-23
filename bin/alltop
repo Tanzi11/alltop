@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../lib/alltop'
 
-# CLI.new.call
+CLI.new.call
 
-Scraper.scrape
+# Scraper.scrape
 binding.pry
 
 puts 'hi'
