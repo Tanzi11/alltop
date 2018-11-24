@@ -24,8 +24,8 @@ end
 def article_list
   array = Scraper.scrape_trending_items
   array_new = array.values_at(46..-1)
-  array_new.each_with_index do |i, array_new|
-    puts "#{array_new}. #{i}"
+  array_new.each_with_index do |array_new, i|
+    puts "#{i+1}. #{array_new}"
 end
 end
 
