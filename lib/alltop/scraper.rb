@@ -1,16 +1,16 @@
 class Scraper
-  attr_accessor :title
-
-  @@all = []
-
-  def initialize(title=nil)
-    @title = title
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
+  # attr_accessor :title
+  #
+  # @@all = []
+  #
+  # def initialize(title=nil)
+  #   @title = title
+  #   @@all << self
+  # end
+  #
+  # def self.all
+  #   @@all
+  # end
 
 
 def self.scrape
@@ -21,12 +21,23 @@ def self.scrape
 end
 end
 
+def self.scrape_quotes
+  doc = Nokogiri::HTML(open("https://alltop.com/"))
+  quotes = doc.css("div.container")
+  quotes.css("a.one-line-ellipsis").map do |quote|
+    list = quote.attribute("data-content").value.gsub(/<\/?[^>]*>/, "")
+end
+end
 
-# publication_names.css("a").children.collect do |name|
-# title = name.text
+def self.scrape_trending_items
+  doc = Nokogiri::HTML(open("https://alltop.com/"))
+  items = doc.css("div.container li")
+  items.css("a").collect do |item|
+    line = item.children.text
+end
+end
 
-# publication_names = doc.css("div.container p")
-# name = publication_names.css("a").children.text
+
 
 # def self.scrape_block
 #   @scraping_block.each do |ele|

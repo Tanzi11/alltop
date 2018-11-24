@@ -5,22 +5,29 @@ def call
   puts "************************************************************"
   title_list
   puts "************************************************************"
-  # article_list
+  article_list
   # done
 end
 
 def welcome
-  puts "Welcome informed citizen! What are you excited to read?"
+  puts "Welcome informed citizen! Where are you itching to go today?"
 end
 
 def title_list
   array = Scraper.scrape
   array_new = array.values_at(0,2,4,6,8,10,12,14,16,18,20,22,24,26)
   array_new.each_with_index do |i, array_new|
-  puts " #{array_new}. #{i}"
+  puts "#{array_new}. #{i}"
 end
 end
 
+def article_list
+  array = Scraper.scrape_trending_items
+  array_new = array.values_at(46..-1)
+  array_new.each_with_index do |i, array_new|
+    puts "#{array_new}. #{i}"
+end
+end
 
 end
 
