@@ -16,8 +16,8 @@ end
 def title_list
   array = Scraper.scrape
   array_new = array.values_at(0,2,4,6,8,10,12,14,16,18,20,22,24,26)
-  array_new.each_with_index do |i, array_new|
-  puts "#{array_new}. #{i}"
+  array_new.each_with_index do |array_new, i|
+  puts "#{i+1}. #{array_new}"
 end
 end
 
