@@ -29,7 +29,10 @@ def article_list
 end
 end
 
+def done
+  puts "That's enough news for now. Until next time!"
 end
 
+end
 # array_new = array.partition.each_with_index{ |el, i| i.even? }
 # list = array_new[0].delete_if {|i| i == "About" || i == "Privacy Policy" || i == "AllTop.com"}

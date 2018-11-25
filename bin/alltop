@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../lib/alltop'
 
-CLI.new.call
 
-# Scraper.scrape_trending_items
-binding.pry
+
+Scraper.scrape_articles
 puts "Kya"
