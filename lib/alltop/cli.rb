@@ -23,16 +23,24 @@ def title_list
 end
 end
 
-def fix_trending_items
-  array = Scraper.scrape_trending_items
+# def fix_trending_items
+#   array = Scraper.scrape_trending_items
+# end
+#
+# def article_list
+#   array_new = fix_trending_items.values_at(46..50)
+#   array_new.each_with_index do |array_new, i|
+#        puts "#{i+1}. #{array_new}"
+#      end
+#    end
+
+def techcrunch
+  puts Scraper.techcrunch_articles
 end
 
-def article_list
-  array_new = fix_trending_items.values_at(46..50)
-  array_new.each_with_index do |array_new, i|
-       puts "#{i+1}. #{array_new}"
-     end
-   end
+def wired
+  puts Scraper.wired_articles
+end
 
 # def article_list
 #   array = Scraper.scrape_trending_items

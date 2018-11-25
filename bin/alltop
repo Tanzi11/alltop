@@ -3,6 +3,6 @@ require_relative '../lib/alltop'
 
 
 
-CLI.new.article_list
+CLI.new.call
 binding.pry
 puts "Kya"
