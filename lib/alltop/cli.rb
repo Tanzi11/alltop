@@ -4,13 +4,15 @@ def call
   welcome
   puts "************************************************************"
   title_list
-  puts "************************************************************"
-  article_list
-  # done
+  input = nil
+    until input == "done"
+      puts "Where do you want to go?"
+      input = gets.chomp.to_i
+end
 end
 
 def welcome
-  puts "Welcome informed citizen! Where are you itching to go today?"
+  puts "Welcome informed citizen!"
 end
 
 def title_list
@@ -21,18 +23,28 @@ def title_list
 end
 end
 
-def article_list
+def fix_trending_items
   array = Scraper.scrape_trending_items
-  array_new = array.values_at(46..-1)
+end
+
+def article_list
+  array_new = fix_trending_items.values_at(46..50)
   array_new.each_with_index do |array_new, i|
-    puts "#{i+1}. #{array_new}"
-end
-end
+       puts "#{i+1}. #{array_new}"
+     end
+   end
+
+# def article_list
+#   array = Scraper.scrape_trending_items
+#   array_new = array.values_at(46..-1)
+#   array_new.each_with_index do |array_new, i|
+#     puts "#{i+1}. #{array_new}"
+# end
+# end
+
 
 def done
   puts "That's enough news for now. Until next time!"
 end
 
 end
-# array_new = array.partition.each_with_index{ |el, i| i.even? }
-# list = array_new[0].delete_if {|i| i == "About" || i == "Privacy Policy" || i == "AllTop.com"}
