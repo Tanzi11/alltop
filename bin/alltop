@@ -1,8 +1,4 @@
 #!/usr/bin/env ruby
 require_relative '../lib/alltop'
 
-
-
-Scraper.scrape
-binding.pry
-AllTop.all
+CLI.new.call
