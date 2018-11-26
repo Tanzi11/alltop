@@ -2,11 +2,11 @@ class Scraper
 
 def self.scrape
   doc = Nokogiri::HTML(open("https://alltop.com/"))
-  publication_names = doc.css("div.container p")
-  publication_names.css("a").each do |node|
-    title = node.children.text
+  publication_names = doc.css("div.col-xs-12.col-md-4 p")
+  publication_names.css("a")[0..-2].each do |node|
+    title = node.text.split("(")[0]
     url = node.attribute("href").value
-    AllTop.new(title,url)
+    AllTop.new(title,url) unless title.empty?
 end
 end
 
