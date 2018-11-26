@@ -3,6 +3,6 @@ require_relative '../lib/alltop'
 
 
 
-CLI.new.call
+Scraper.scrape
 binding.pry
-puts "Kya"
+AllTop.all

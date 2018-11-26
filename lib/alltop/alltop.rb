@@ -1,7 +1,7 @@
-class Alltop
+class AllTop
   attr_accessor :news_name, :news_url, :articles
   @@all = []
-  
+
   def initialize(name,url)
     @news_name = name
     @news_url = url
