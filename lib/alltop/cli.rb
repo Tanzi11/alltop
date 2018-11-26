@@ -16,10 +16,9 @@ def welcome
 end
 
 def title_list
-  array = Scraper.scrape
-  array_new = array.values_at(0,2,4,6,8,10,12,14,16,18,20,22,24,26)
-  array_new.each_with_index do |array_new, i|
-  puts "#{i+1}. #{array_new}"
+  Scraper.scrape
+  AllTop.all.each_with_index do |alltop_obj, i|
+  puts "#{i+1}. #{alltop_obj.news_name}"
 end
 end
 

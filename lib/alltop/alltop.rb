@@ -13,4 +13,8 @@ class AllTop
     @@all
   end
 
+  def add_article(article_obj)
+    @articles << article_obj
+  end
+
 end
