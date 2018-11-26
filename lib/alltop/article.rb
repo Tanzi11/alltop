@@ -3,11 +3,10 @@ class Article
 
   def initialize(title,url,quote,alltop)
     @title = title
-    @article_url = article_url
+    @article_url = url
     @quote = quote
     @alltop = alltop
-  end
-
-
+    @alltop.add_article(self)
+end
 
 end
