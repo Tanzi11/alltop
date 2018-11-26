@@ -4,11 +4,13 @@ def call
   welcome
   puts "************************************************************"
   title_list
-  input = nil
-    until input == "done"
-      puts "Where do you want to go?"
-      input = gets.chomp.to_i
-end
+  get_user_input
+  display_articles
+  # menu
+      # case input
+      # when input "1"
+      #   article_list
+      # end
 end
 
 def welcome
@@ -22,6 +24,38 @@ def title_list
 end
 end
 
+def get_user_input
+  puts "Select the number:"
+  input = gets.strip.to_i
+  @selected_index = input - 1
+end
+
+def display_articles
+  binding.pry
+Scraper.scrape
+AllTop.all.each do |alltop_obj, i|
+  puts "#{alltop_obj.articles.first}"
+end
+end
+
+
+
+# def menu
+#   input = nil
+#     until input == "done"
+#       puts ""
+#       puts "Where do you want to go?"
+#       input = gets.chomp.to_i
+#
+#       if input.to_i == "1"
+#         puts "TechCrunch"
+#         puts "#{article_obj}"
+# end
+# end
+
+
+
+
 # def fix_trending_items
 #   array = Scraper.scrape_trending_items
 # end
@@ -33,13 +67,7 @@ end
 #      end
 #    end
 
-def techcrunch
-  puts Scraper.techcrunch_articles
-end
 
-def wired
-  puts Scraper.wired_articles
-end
 
 # def article_list
 #   array = Scraper.scrape_trending_items
