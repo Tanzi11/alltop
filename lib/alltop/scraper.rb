@@ -1,16 +1,12 @@
 class Scraper
-  attr_accessor
-
-
-
 
 def self.scrape
   doc = Nokogiri::HTML(open("https://alltop.com/"))
   publication_names = doc.css("div.container p")
   publication_names.css("a").each do |node|
-    binding.pry
-    title = name.children.text
-    url
+    title = node.children.text
+    url = node.attribute("href").value
+    AllTop.new(title,url)
 end
 end
 
