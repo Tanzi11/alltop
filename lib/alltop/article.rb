@@ -1,12 +1,22 @@
 class Article
   attr_accessor :title, :article_url, :quote, :alltop
 
-  def initialize(title,url,quote,alltop)
-    @title = title
+  @@all = []
+
+  def initialize(name,url,quote,alltop_obj)
+    @title = name
     @article_url = url
     @quote = quote
-    @alltop = alltop
+    @alltop = alltop_obj
     @alltop.add_article(self)
 end
+
+def self.all
+  @@all
+end
+
+# def articles
+#   article_obj = Alltop.all.alltop
+# end
 
 end

@@ -11,32 +11,11 @@ def self.scrape
   end
      alltop_obj = AllTop.all.last
      node.css("ul").each do |li|
-       title = li.css("a").children[0].text
+       name = li.css("a").children[0].text
        url = li.css("a.one-line-ellipsis").attribute("href").value
        quote = li.css("a.one-line-ellipsis").attribute("data-content").value.split("<br>")[1]
-       Article.new(title,url,quote,alltop_obj)
-     end
+       article_obj = Article.new(name,url,quote,alltop_obj)
+      end
 end
 end
-
-
-# def self.scrape_quotes
-#   doc = Nokogiri::HTML(open("https://alltop.com/"))
-#   quotes = doc.css("div.container")
-#   quotes.css("a.one-line-ellipsis").map do |quote|
-#     list = quote.attribute("data-content").value.gsub(/<\/?[^>]*>/, "")
-# end
-# end
-#
-# def self.scrape_trending_items
-#   doc = Nokogiri::HTML(open("https://alltop.com/"))
-#   items = doc.css("div.container li")
-#   items.css("a").collect do |item|
-#     line = item.children.text
-# end
-# end
-#
-
-
-
 end
