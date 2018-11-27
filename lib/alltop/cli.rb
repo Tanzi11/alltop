@@ -23,15 +23,15 @@ end
 
 def get_user_input
   input = nil
-  puts "Where do you wish to go? Select a number or type exit"
-  while input != "exit" do
+  puts "Where do you wish to go? Select a number or type exit:"
+  until input == "exit" do
   input = gets.strip.to_i
   @selected_index = input - 1
   if input.between?(1,14)
     puts display_articles
   else
-  done
-end
+    done
+  end
 end
 end
 
@@ -39,7 +39,7 @@ end
 def display_articles
 alltop_obj = AllTop.all[@selected_index]
 alltop_obj.articles.each do |article_obj|
-  puts "****************************************************"
+  puts "************************************************************"
   puts "Article Headline: #{article_obj.title}\n\n "
   puts "Teaser: #{article_obj.quote}\n\n "
   puts "Link for Further Info: #{article_obj.article_url}"
