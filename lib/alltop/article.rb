@@ -15,8 +15,5 @@ def self.all
   @@all
 end
 
-# def articles
-#   article_obj = Alltop.all.alltop
-# end
 
 end

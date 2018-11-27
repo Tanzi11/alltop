@@ -15,7 +15,6 @@ class AllTop
 
   def add_article(article_obj)
     @articles << article_obj
-    # article_obj.alltop ||= self
   end
 
 
