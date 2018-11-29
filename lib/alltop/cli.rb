@@ -7,7 +7,6 @@ def call
   get_user_input
   display_articles
   done
-  exit
 end
 
 def welcome
@@ -53,6 +52,7 @@ end
 
 def done
   puts "That's enough news for now. Until next time!"
+  exit
 end
 
 end
