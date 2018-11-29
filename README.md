@@ -1,28 +1,14 @@
 # Alltop
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/alltop`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Alltop scraper and CLI Gem! See the mainstream media publications and outlets from New York Times to Reddit and the daily listing of trending articles under each. Don't wait, get informed!
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'alltop'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install alltop
+At this moment, this gem is not published. However, for more information on it, please check out the github link here: https://github.com/Tanzi11/alltop
 
 ## Usage
 
-TODO: Write usage instructions here
+ruby ./bin/alltop and then run the CLI in the executable file.
 
 ## Development
 
