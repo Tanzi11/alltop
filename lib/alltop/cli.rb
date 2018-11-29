@@ -7,6 +7,7 @@ def call
   get_user_input
   display_articles
   done
+  exit
 end
 
 def welcome
@@ -28,7 +29,8 @@ def get_user_input
   input = gets.strip.to_i
   @selected_index = input - 1
   if input.between?(1,14)
-    puts display_articles
+    display_articles
+      get_user_input
   else
     done
   end
