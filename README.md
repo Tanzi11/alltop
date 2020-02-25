@@ -1,6 +1,9 @@
 # Alltop
 
-Welcome to the Alltop scraper and CLI Gem! See the mainstream media publications and outlets from New York Times to Reddit and the daily listing of trending articles under each. Don't wait, get informed!
+Welcome to the Alltop scraper and CLI Gem! See the mainstream media publications and outlets from New York Times to Reddit and the daily listing of trending articles under each. 
+
+## Motivation
+As a media person and news junkie, for my CLI project at Flatiron, I chose to focus on the news aggregator, AllTop. I wanted the user to come to a clean interface with the options of chosing their desired publications and see the top title of the day with a teaser. Originally, when you look at AllTop (or any site), they usually just give a list of links (title) and try to entice you with that. 
 
 ## Installation
 
@@ -8,7 +11,12 @@ At this moment, this gem is not published. However, for more information on it, 
 
 ## Usage
 
-ruby ./bin/alltop and then run the CLI in the executable file.
+Run ruby bin/alltop in the terminal and you should see it show up. When the menu appears, choose a number and follow the directions!
+
+## Tech/Framework
+
+Built with: 
+  Ruby
 
 ## Development
 
